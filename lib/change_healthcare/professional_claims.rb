@@ -1,4 +1,6 @@
-require "change_healthcare/professional_claims/version"
+# frozen_string_literal: true
+
+require 'change_healthcare/professional_claims/version'
 
 module ChangeHealthcare
   module ProfessionalClaims
