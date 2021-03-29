@@ -16,11 +16,21 @@ module ChangeHealthcare
   module ProfessionalClaims
     module SwaggerClient
       class ClaimSupplementalInformation
-        attr_accessor :adjusted_repriced_claim_number, :care_plan_oversight_number, :claim_control_number, :claim_number,
-                      :clia_number, :demo_project_identifier, :investigational_device_exemption_number, :mammography_certification_number, :medical_record_number, :medicare_crossover_reference_id, :prior_authorization_number, :referral_number, :report_information, :repriced_claim_number
+        attr_accessor(
+          :adjusted_repriced_claim_number, :care_plan_oversight_number, :claim_control_number, :claim_number,
+          :clia_number, :demo_project_identifier, :investigational_device_exemption_number, :mammography_certification_number,
+          :medical_record_number, :medicare_crossover_reference_id, :prior_authorization_number, :referral_number, :report_information, :repriced_claim_numbe
+        )
 
-        # '1' Immediate/Urgent Care, '2' Services Rendered in a Retroactive Period, '3' Emergency Care, '4' Client has Temporary Medicaid, '5' Request from County for Second Opinion to Determine if Recipient Can Work, '6' Request for Override Pending, '7' Special Handling, Null
-        attr_accessor :service_authorization_exception_code
+        # Allowed values are
+        # - '1' Immediate/Urgent Care
+        # - '2' Services Rendered in a Retroactive Period
+        # - '3' Emergency Care
+        # - '4' Client has Temporary Medicaid
+        # - '5' Request from County for Second Opinion to Determine if Recipient Can Work
+        # - '6' Request for Override Pending
+        # - '7' Special Handling, Null
+        attr_reader :service_authorization_exception_code
 
         class EnumAttributeValidator
           attr_reader :datatype, :allowable_values
@@ -184,8 +194,12 @@ module ChangeHealthcare
         # Calculates hash code according to all attributes.
         # @return [Fixnum] Hash code
         def hash
-          [adjusted_repriced_claim_number, care_plan_oversight_number, claim_control_number, claim_number, clia_number,
-           demo_project_identifier, investigational_device_exemption_number, mammography_certification_number, medical_record_number, medicare_crossover_reference_id, prior_authorization_number, referral_number, report_information, repriced_claim_number, service_authorization_exception_code].hash
+          [
+            adjusted_repriced_claim_number, care_plan_oversight_number, claim_control_number, claim_number, clia_number,
+            demo_project_identifier, investigational_device_exemption_number, mammography_certification_number,
+            medical_record_number, medicare_crossover_reference_id, prior_authorization_number, referral_number,
+            report_information, repriced_claim_number, service_authorization_exception_code
+          ].hash
         end
 
         # Builds the object from hash

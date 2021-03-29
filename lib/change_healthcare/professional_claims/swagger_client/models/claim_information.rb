@@ -16,29 +16,68 @@ module ChangeHealthcare
   module ProfessionalClaims
     module SwaggerClient
       class ClaimInformation
-        attr_accessor :ambulance_certification, :ambulance_drop_off_location, :ambulance_pick_up_location,
-                      :ambulance_transport_information, :anesthesia_related_surgical_procedure, :auto_accident_country_code, :auto_accident_state_code, :claim_charge_amount, :claim_contract_information, :claim_date_information, :claim_filing_code, :claim_frequency_code, :claim_note, :claim_pricing_repricing_information, :claim_supplemental_information, :condition_information, :epsdt_referral, :file_information, :health_care_code_information, :homebound_indicator, :other_subscriber_information, :patient_amount_paid, :patient_condition_information_vision, :patient_control_number, :patient_signature_source_code, :patient_weight, :place_of_service_code, :property_casualty_claim_number, :service_facility_location, :service_lines, :spinal_manipulation_service_information
+        attr_accessor(
+          :ambulance_certification, :ambulance_drop_off_location, :ambulance_pick_up_location,
+          :ambulance_transport_information, :anesthesia_related_surgical_procedure, :auto_accident_country_code, :auto_accident_state_code, :claim_charge_amount,
+          :claim_contract_information, :claim_date_information, :claim_filing_code, :claim_frequency_code, :claim_note,
+          :claim_pricing_repricing_information, :claim_supplemental_information, :condition_information, :epsdt_referral,
+          :file_information, :health_care_code_information, :homebound_indicator, :other_subscriber_information, :patient_amount_paid,
+          :patient_condition_information_vision, :patient_control_number, :patient_signature_source_code,
+          :patient_weight, :place_of_service_code, :property_casualty_claim_number,
+          :service_facility_location, :service_lines, :spinal_manipulation_service_information
+        )
 
-        # Allowed Values are: 'N' No, 'W' Not Applicable - Use code 'W' when the patient refuses to assign benefits, 'Y' Yes
-        attr_accessor :benefits_assignment_certification_indicator
+        ##
+        # Allowed Values are:
+        # - 'N' No,
+        # - 'W' Not Applicable - Use code 'W' when the patient refuses to assign benefits
+        # - 'Y' Yes
+        attr_reader :benefits_assignment_certification_indicator
 
-        # Allowed Values are: '1' Proof of Eligibility Unknown or Unavailable, '2' Litigation, '3' Authorization Delays, '4' Delay in Certifying Provider, '5' Delay in Supplying Billing Forms, '6' Delay in Delivery of Custom-made Appliances, '7' Third Party Processing Delay, '8' Delay in Eligibility Determination, '9' Original Claim Rejected or Denied Due to a Reason Unrelated to the Billing Limitation Rules, '10' Administration Delay in the Prior Approval Process, '11' Other, '15' Natural Disaster
-        attr_accessor :delay_reason_code
+        # Allowed Values are:
+        # - '1' Proof of Eligibility Unknown or Unavailable
+        # - '2' Litigation,
+        # - '3' Authorization Delays
+        # - '4' Delay in Certifying Provider
+        # - '5' Delay in Supplying Billing Forms
+        # - '6' Delay in Delivery of Custom-made Appliances,
+        # - '7' Third Party Processing Delay
+        # - '8' Delay in Eligibility Determination
+        # - '9' Original Claim Rejected or Denied Due to a Reason Unrelated to the Billing Limitation Rules
+        # - '10' Administration Delay in the Prior Approval Process
+        # - '11' Other
+        # - '15' Natural Disaster
+        attr_reader :delay_reason_code
 
-        # Allowed Values are: 'A' Assigned, 'B' Assignment Accepted on Clinical Lab Service Only, 'C' Not Assigned - Required when neither codes 'A' or 'B' apply
-        attr_accessor :plan_participation_code
+        # Allowed Values are:
+        # - 'A' Assigned
+        # - 'B' Assignment Accepted on Clinical Lab Service Only
+        # - 'C' Not Assigned - Required when neither codes 'A' or 'B' apply
+        attr_reader :plan_participation_code
 
-        # Allowed Values are: 'AA' Auto Accident, 'EM' Employment, 'OA' Other Accident
-        attr_accessor :related_causes_code
+        # Allowed Values are:
+        # - 'AA' Auto Accident
+        # - 'EM' Employment
+        # - 'OA' Other Accident
+        attr_reader :related_causes_code
 
-        # Allowed Values are: 'I' Informed Consent to Release Medical Information for Conditions or Diagnoses Regulated by Federal Statutes, 'Y' Yes
-        attr_accessor :release_information_code
+        # Allowed Values are:
+        #
+        # - 'I' Informed Consent to Release Medical Information for Conditions or Diagnoses Regulated by Federal Statutes
+        # - 'Y' Yes
+        attr_reader :release_information_code
 
-        # Allowed Values are: 'N' NO, 'Y' Yes
-        attr_accessor :signature_indicator
+        # Allowed Values are:
+        # - 'N' NO,
+        # - 'Y' Yes
+        attr_reader :signature_indicator
 
-        # Allowed Values are: '02' Physically Handicapped Children's Program, '03' Special Federal Funding, '05' Disabolity, '09' Second Opinion or Surgery
-        attr_accessor :special_program_code
+        # Allowed Values are:
+        # - '02' Physically Handicapped Children's Program
+        # - '03' Special Federal Funding
+        # - '05' Disabolity
+        # - '09' Second Opinion or Surgery
+        attr_reader :special_program_code
 
         class EnumAttributeValidator
           attr_reader :datatype, :allowable_values
@@ -408,8 +447,17 @@ module ChangeHealthcare
         # Calculates hash code according to all attributes.
         # @return [Fixnum] Hash code
         def hash
-          [ambulance_certification, ambulance_drop_off_location, ambulance_pick_up_location,
-           ambulance_transport_information, anesthesia_related_surgical_procedure, auto_accident_country_code, auto_accident_state_code, benefits_assignment_certification_indicator, claim_charge_amount, claim_contract_information, claim_date_information, claim_filing_code, claim_frequency_code, claim_note, claim_pricing_repricing_information, claim_supplemental_information, condition_information, delay_reason_code, epsdt_referral, file_information, health_care_code_information, homebound_indicator, other_subscriber_information, patient_amount_paid, patient_condition_information_vision, patient_control_number, patient_signature_source_code, patient_weight, place_of_service_code, plan_participation_code, property_casualty_claim_number, related_causes_code, release_information_code, service_facility_location, service_lines, signature_indicator, special_program_code, spinal_manipulation_service_information].hash
+          [
+            ambulance_certification, ambulance_drop_off_location, ambulance_pick_up_location,
+            ambulance_transport_information, anesthesia_related_surgical_procedure, auto_accident_country_code, auto_accident_state_code,
+            benefits_assignment_certification_indicator, claim_charge_amount, claim_contract_information, claim_date_information,
+            claim_filing_code, claim_frequency_code, claim_note, claim_pricing_repricing_information, claim_supplemental_information,
+            condition_information, delay_reason_code, epsdt_referral, file_information, health_care_code_information,
+            homebound_indicator, other_subscriber_information, patient_amount_paid, patient_condition_information_vision,
+            patient_control_number, patient_signature_source_code, patient_weight, place_of_service_code,
+            plan_participation_code, property_casualty_claim_number, related_causes_code, release_information_code, service_facility_location,
+            service_lines, signature_indicator, special_program_code, spinal_manipulation_service_information
+          ].hash
         end
 
         # Builds the object from hash

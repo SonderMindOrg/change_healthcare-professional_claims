@@ -16,17 +16,48 @@ module ChangeHealthcare
   module ProfessionalClaims
     module SwaggerClient
       class ClaimPricingRepricingInformation
-        # Allowed Values are: '1' Non-Network Professional Provider in Network Hospital, '2' Emergency Care, '3' Services or Specialist not in Network, '4' Out-of-Service Area, '5' State Mandates, '6' Other
-        attr_accessor :exception_code
+        # Allowed Values are:
+        # - '1' Non-Network Professional Provider in Network Hospital
+        # - '2' Emergency Care, '3' Services or Specialist not in Network
+        # - '4' Out-of-Service Area
+        # - '5' State Mandates
+        # - '6' Other
+        attr_reader :exception_code
 
-        # Allowed Values are: '1' Procedure Followed (Compliance), '2' Not Followed - Call Not Made (Non-Compliance Call Not Made), '3' Not Medically Necessary (Non-Compliance Non-Medically Necessary), '4' Not Followed Other (Non-Compliance Other), '5' Emergency Admit to Non-Network Hospital
-        attr_accessor :policy_compliance_code
+        # Allowed Values are:
+        # - '1' Procedure Followed (Compliance)
+        # - '2' Not Followed - Call Not Made (Non-Compliance Call Not Made)
+        # - '3' Not Medically Necessary (Non-Compliance Non-Medically Necessary)
+        # - '4' Not Followed Other (Non-Compliance Other)
+        # - '5' Emergency Admit to Non-Network Hospital
+        attr_reader :policy_compliance_code
 
-        # Allowed Values are: '00' Zero Pricing (Not Covered Under Contract), '01' Priced as Billed at 100%, '02' Priced at the Standard Fee Schedule, '03' Priced at a Contractual Percentage, '04' Bundled Pricing, '05' Peer Review Pricing, '06' Bundled Pricing, '07' Flat Rate Pricing, '08' Combination Pricing, '09' Maternity Pricing, '10' Other Pricing, '11' Lower of Cost, '12' Ratio of Cost, '13' Cost Reimbursed, '14' Adjustment Pricing
-        attr_accessor :pricing_methodology_code
+        # Allowed Values are:
+        # - '00' Zero Pricing (Not Covered Under Contract)
+        # - '01' Priced as Billed at 100%
+        # - '02' Priced at the Standard Fee Schedule
+        # - '03' Priced at a Contractual Percentage
+        # - '04' Bundled Pricing
+        # - '05' Peer Review Pricing
+        # - '06' Bundled Pricing
+        # - '07' Flat Rate Pricing
+        # - '08' Combination Pricing
+        # - '09' Maternity Pricing
+        # - '10' Other Pricing
+        # - '11' Lower of Cost
+        # - '12' Ratio of Cost
+        # - '13' Cost Reimbursed
+        # - '14' Adjustment Pricing
+        attr_reader :pricing_methodology_code
 
-        # Allowed Values are: 'T1' Cannot Identify Provider as TPO (Third Party Organization) Participant, 'T2' Cannot Identify Payer as TPO (Third Party Organization) Participant, 'T3' Cannot Identify Insured as TPO (Third Party Organization) Participant, 'T4' Payer Name or Identifier Missing, 'T5' Certification Information Missing, '16' Claim does not contain enough information for repricing
-        attr_accessor :reject_reason_code
+        # Allowed Values are:
+        # - 'T1' Cannot Identify Provider as TPO (Third Party Organization) Participant
+        # - 'T2' Cannot Identify Payer as TPO (Third Party Organization) Participant
+        # - 'T3' Cannot Identify Insured as TPO (Third Party Organization) Participant
+        # - 'T4' Payer Name or Identifier Missing
+        # - 'T5' Certification Information Missing
+        # - '16' Claim does not contain enough information for repricing
+        attr_reader :reject_reason_code
 
         attr_accessor :repriced_allowed_amount, :repriced_approved_ambulatory_patient_group_amount,
                       :repriced_approved_ambulatory_patient_group_code, :repriced_saving_amount, :repricing_organization_identifier, :repricing_per_diem_or_flat_rate_amoung

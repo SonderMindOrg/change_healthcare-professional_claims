@@ -16,8 +16,17 @@ module ChangeHealthcare
   module ProfessionalClaims
     module SwaggerClient
       class AmbulanceTransportInformation
-        # Allowed Values are: 'A' Patient was transported to nearest facility for care of symptoms, complaints, or both, 'B' Patient was transported for the benefit of a preferred physician, 'C' Patient was transported for the nearness of family members, 'D' Patient was transported for the care of a specialist or for availability of specialized equipment, 'E' Patient Transferred to Rehabilitation Facility
-        attr_accessor :ambulance_transport_reason_code
+        ##
+        # Allowed Values are:
+        #
+        # - 'A' Patient was transported to nearest facility for care of symptoms, complaints, or both,
+        # - 'B' Patient was transported for the benefit of a preferred physician,
+        # - 'C' Patient was transported for the nearness of family members
+        # - 'D' Patient was transported for the care of a specialist or for availability of specialized equipment
+        # - 'E' Patient Transferred to Rehabilitation Facility
+        #
+        # @return ['A', 'B', 'C', 'D', 'E']
+        attr_reader :ambulance_transport_reason_code
 
         attr_accessor :patient_weight_in_pounds, :round_trip_purpose_description, :stretcher_purpose_description,
                       :transport_distance_in_miles
