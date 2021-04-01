@@ -22,6 +22,7 @@ module ChangeHealthcare
         attr_reader :certification_condition_indicator
 
         # Allowed Values are:
+        #
         #   - '01' Patient was admitted to a hospital
         #   - '04' Patient was moved by stretcher
         #   - '05' Patient was unconscious or in shock

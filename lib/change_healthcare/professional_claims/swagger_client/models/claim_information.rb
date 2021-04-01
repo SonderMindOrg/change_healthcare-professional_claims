@@ -29,12 +29,14 @@ module ChangeHealthcare
 
         ##
         # Allowed Values are:
+        #
         # - 'N' No,
         # - 'W' Not Applicable - Use code 'W' when the patient refuses to assign benefits
         # - 'Y' Yes
         attr_reader :benefits_assignment_certification_indicator
 
         # Allowed Values are:
+        #
         # - '1' Proof of Eligibility Unknown or Unavailable
         # - '2' Litigation,
         # - '3' Authorization Delays
@@ -50,12 +52,14 @@ module ChangeHealthcare
         attr_reader :delay_reason_code
 
         # Allowed Values are:
+        #
         # - 'A' Assigned
         # - 'B' Assignment Accepted on Clinical Lab Service Only
         # - 'C' Not Assigned - Required when neither codes 'A' or 'B' apply
         attr_reader :plan_participation_code
 
         # Allowed Values are:
+        #
         # - 'AA' Auto Accident
         # - 'EM' Employment
         # - 'OA' Other Accident
@@ -68,11 +72,13 @@ module ChangeHealthcare
         attr_reader :release_information_code
 
         # Allowed Values are:
+        #
         # - 'N' NO,
         # - 'Y' Yes
         attr_reader :signature_indicator
 
         # Allowed Values are:
+        #
         # - '02' Physically Handicapped Children's Program
         # - '03' Special Federal Funding
         # - '05' Disabolity

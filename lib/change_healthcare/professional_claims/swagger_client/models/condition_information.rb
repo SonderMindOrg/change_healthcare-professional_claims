@@ -39,10 +39,9 @@ module ChangeHealthcare
 
           # convert string to symbol for hash key
           attributes = attributes.transform_keys(&:to_sym)
+          value = attributes[:conditionCodes]
 
-          if attributes.key?(:conditionCodes) && (value = attributes[:conditionCodes]).is_a?(Array)
-            self.condition_codes = value
-          end
+          self.condition_codes = value if value.is_a?(Array)
         end
 
         # Show invalid properties with the reasons. Usually used together with valid?

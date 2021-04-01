@@ -16,14 +16,23 @@ module ChangeHealthcare
   module ProfessionalClaims
     module SwaggerClient
       class ConditionIndicatorDurableMedicalEquipment
-        # Allowed Values are: 'N' No, 'Y' Yes
-        attr_accessor :certification_condition_indicator
+        # Allowed Values are:
+        #
+        # - 'N' No
+        # - 'Y' Yes
+        attr_reader :certification_condition_indicator
 
-        # Allowed Values are: '38' Certification signed by the physician is on file at the supplier’s office, 'ZV' Replacement Item
-        attr_accessor :condition_indicator
+        # Allowed Values are
+        #
+        # - '38' Certification signed by the physician is on file at the supplier’s office
+        # - 'ZV' Replacement Item
+        attr_reader :condition_indicator
 
-        # Allowed Values are: '38' Certification signed by the physician is on file at the supplier’s office, 'ZV' Replacement Item
-        attr_accessor :condition_indicator_code
+        # Allowed Values are:
+        #
+        # - '38' Certification signed by the physician is on file at the supplier’s office
+        # - 'ZV' Replacement Item
+        attr_reader :condition_indicator_code
 
         class EnumAttributeValidator
           attr_reader :datatype, :allowable_values
