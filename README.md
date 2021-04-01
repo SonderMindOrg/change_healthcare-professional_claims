@@ -1,8 +1,8 @@
 # ChangeHealthcare::ProfessionalClaims
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/change_healthcare/professional_claims`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem provides access to the [v3 Processional Claims API](https://developers.changehealthcare.com/api/Professional-Claims/v3#) from Change Healthcare.
+It is primarily a generated swagger client, but does contain a wrapper to make acquiring access tokens in a thread-safe way easier.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -32,8 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/change_healthcare-professional_claims.
-
+Bug reports and pull requests are welcome on [GitHub](https://github.com/SonderMindOrg/change_healthcare-professional_claims).
 
 ## License
 
