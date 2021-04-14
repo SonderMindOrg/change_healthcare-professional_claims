@@ -16,13 +16,32 @@ module ChangeHealthcare
   module ProfessionalClaims
     module SwaggerClient
       class OtherSubscriberName
-        attr_accessor :other_insured_additional_identifier, :other_insured_address, :other_insured_first_name,
-                      :other_insured_identifier, :other_insured_last_name, :other_insured_middle_name, :other_insured_name_suffix
+        attr_accessor(
+          :other_insured_additional_identifier,
+          :other_insured_address,
+          :other_insured_first_name,
+          :other_insured_identifier,
+          :other_insured_last_name,
+          :other_insured_middle_name,
+          :other_insured_name_suffix
+        )
 
-        # Allowed Values are: 'II' Standard Unique Health Identifier for each Individual in the United States, 'MI' Member Identification Number
-        attr_accessor :other_insured_identifier_type_code
+        ##
+        # Allowed Values are:
+        #
+        # - 'II' Standard Unique Health Identifier for each Individual in the United States
+        # - 'MI' Member Identification Number
+        #
+        # @return [String]
+        attr_reader :other_insured_identifier_type_code
 
-        # Allowed Values are: '1' Person, '2' Non-Person Entity
+        ##
+        # Allowed Values are:
+        #
+        # - '1' Person
+        # - '2' Non-Person Entity
+        #
+        # @return [String]
         attr_accessor :other_insured_qualifier
 
         class EnumAttributeValidator
@@ -124,7 +143,7 @@ module ChangeHealthcare
         # Custom attribute writer method checking allowed values (enum).
         # @param [Object] other_insured_identifier_type_code Object to be assigned
         def other_insured_identifier_type_code=(other_insured_identifier_type_code)
-          validator = EnumAttributeValidator.new('String', %w[1 2])
+          validator = EnumAttributeValidator.new('String', %w[MI II])
           unless validator.valid?(other_insured_identifier_type_code)
             raise ArgumentError,
                   %(invalid value for "other_insured_identifier_type_code", must be one of #{validator.allowable_values}.)

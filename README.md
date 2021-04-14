@@ -3,6 +3,8 @@
 This gem provides access to the [v3 Processional Claims API](https://developers.changehealthcare.com/api/Professional-Claims/v3#) from Change Healthcare.
 It is primarily a generated swagger client, but does contain a wrapper to make acquiring access tokens in a thread-safe way easier.
 
+This gem is currently in alpha, as it is not yet properly cleaned up and nice to use --- it's just the generated swagger!
+Use at your own risk.
 
 ## Installation
 

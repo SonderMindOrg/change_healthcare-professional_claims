@@ -19,7 +19,7 @@ module ChangeHealthcare
         attr_accessor(
           :adjusted_repriced_claim_number, :care_plan_oversight_number, :claim_control_number, :claim_number,
           :clia_number, :demo_project_identifier, :investigational_device_exemption_number, :mammography_certification_number,
-          :medical_record_number, :medicare_crossover_reference_id, :prior_authorization_number, :referral_number, :report_information, :repriced_claim_numbe
+          :medical_record_number, :medicare_crossover_reference_id, :prior_authorization_number, :referral_number, :report_information, :repriced_claim_number
         )
 
         # Allowed values are
