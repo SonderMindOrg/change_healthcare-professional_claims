@@ -20,10 +20,19 @@ module ChangeHealthcare
                       :valid_gender_and_date_of_birth
 
         # notes
-        attr_accessor :gender
+        attr_reader :gender
 
-        # 01 = Spouse, 19 = Child, 20 = Employee, 21 = Unknown, 39 = Organ Donor, 40 = Cadaver Donor, 53 = Life Partner, G8 = Other Relationship
-        attr_accessor :relationship_to_subscriber_code
+        ##
+        # Valid values are:
+        # - 01 = Spouse
+        # - 19 = Child
+        # - 20 = Employee
+        # - 21 = Unknown
+        # - 39 = Organ Donor
+        # - 40 = Cadaver Donor
+        # - 53 = Life Partner
+        # - G8 = Other Relationship
+        attr_reader :relationship_to_subscriber_code
 
         class EnumAttributeValidator
           attr_reader :datatype, :allowable_values
@@ -120,7 +129,7 @@ module ChangeHealthcare
           return false unless gender_validator.valid?(@gender)
 
           relationship_to_subscriber_code_validator = EnumAttributeValidator.new('String',
-                                                                                 %w[01 19 20 39 40 53 G8])
+                                                                                 %w[01 19 20 21 39 40 53 G8])
           return false unless relationship_to_subscriber_code_validator.valid?(@relationship_to_subscriber_code)
 
           true
