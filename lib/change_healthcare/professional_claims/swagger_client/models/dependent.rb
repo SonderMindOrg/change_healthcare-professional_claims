@@ -150,7 +150,7 @@ module ChangeHealthcare
         # Custom attribute writer method checking allowed values (enum).
         # @param [Object] relationship_to_subscriber_code Object to be assigned
         def relationship_to_subscriber_code=(relationship_to_subscriber_code)
-          validator = EnumAttributeValidator.new('String', %w[01 19 20 39 40 53 G8])
+          validator = EnumAttributeValidator.new('String', %w[01 19 20 21 39 40 53 G8])
           unless validator.valid?(relationship_to_subscriber_code)
             raise ArgumentError,
                   %(invalid value for "relationship_to_subscriber_code", must be one of #{validator.allowable_values}.)
