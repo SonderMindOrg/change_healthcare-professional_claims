@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Provides a nicely-wrapped generated swagger client for CHC's professional claims API v3"
   spec.homepage      = 'https://github.com/SonderMindOrg/change_healthcare-professional_claims'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.6.5')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/SonderMindOrg/change_healthcare-professional_claims'

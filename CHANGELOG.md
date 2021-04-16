@@ -1,3 +1,7 @@
+## V0.5.0 - 2021-04-15
+
+- Loosen ruby version bounds
+
 ## V0.4.0 - 20210-04-15
 
 - Anohter `relationship-to-insured` typo fix.
