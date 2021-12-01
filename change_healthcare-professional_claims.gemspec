@@ -31,6 +31,11 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'addressable', '~> 2.5'
   spec.add_dependency 'typhoeus', '~> 1.4'
 
+  # There is a known memory leak in versions of the ethon gem (a subdependency of typhoeus) for versions < 0.15.0. Until
+  # this leak is resolved, we need to ensure that only version 0.15.0+ is used. Once typhoeus is upgraded from 1.4, this
+  # line can probably be removed.
+  spec.add_dependency 'ethon', '~> 0.15.0'
+
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
