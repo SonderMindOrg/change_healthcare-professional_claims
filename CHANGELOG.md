@@ -1,10 +1,14 @@
+## V0.6.0 - 2023-11-17
+
+- Add the `meta` object to the response model.
+
 ## V0.5.0 - 2021-04-15
 
 - Loosen ruby version bounds
 
 ## V0.4.0 - 20210-04-15
 
-- Anohter `relationship-to-insured` typo fix.
+- Another `relationship-to-insured` typo fix.
 
 
 ## V0.3.0 - 2021-04-15
