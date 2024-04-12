@@ -1,3 +1,7 @@
+## V0.6.1 - 2024-04-15
+
+- Fixed the `claim_filing_indicator_code` validator in the `OtherSubscriberInformation` model.
+
 ## V0.6.0 - 2023-11-17
 
 - Add the `meta` object to the response model.

@@ -180,7 +180,7 @@ module ChangeHealthcare
           return false unless benefits_assignment_certification_indicator_validator.valid?(@benefits_assignment_certification_indicator)
 
           claim_filing_indicator_code_validator = EnumAttributeValidator.new('String',
-                                                                             %w[11 12 13 14 15 16 17 AM BL CH DS FI HM LM
+                                                                             %w[11 12 13 14 15 16 17 AM BL CH CI DS FI HM LM
                                                                                 MA MB MC OF TV VA WC ZZ])
           return false unless claim_filing_indicator_code_validator.valid?(@claim_filing_indicator_code)
 
@@ -218,7 +218,7 @@ module ChangeHealthcare
         # @param [Object] claim_filing_indicator_code Object to be assigned
         def claim_filing_indicator_code=(claim_filing_indicator_code)
           validator = EnumAttributeValidator.new('String',
-                                                 %w[11 12 13 14 15 16 17 AM BL CH DS FI HM LM MA MB MC OF TV VA WC ZZ])
+                                                 %w[11 12 13 14 15 16 17 AM BL CH CI DS FI HM LM MA MB MC OF TV VA WC ZZ])
           unless validator.valid?(claim_filing_indicator_code)
             raise ArgumentError,
                   %(invalid value for "claim_filing_indicator_code", must be one of #{validator.allowable_values}.)
